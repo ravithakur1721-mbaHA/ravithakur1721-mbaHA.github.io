@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4S Model Analysis: Osteoarthritis (UP)</title>
+    <style>
+        :root {
+            --primary-color: #006064;
+            /* Teal */
+            --secondary-color: #00838f;
+            --accent-color: #ff6f00;
+            /* Amber for highlights */
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-color: #37474f;
+            --border-radius: 8px;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* --- Header Section --- */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+
+        .student-info {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .info-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            backdrop-filter: blur(5px);
+        }
+
+        /* --- Main Container --- */
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* --- Section Styling --- */
+        section {
+            background: var(--card-bg);
+            margin-bottom: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            /* For rounded corners */
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-left: 5px solid var(--accent-color);
+        }
+
+        /* --- Table Styling --- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+
+        th,
+        td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            width: 30%;
+            /* First column width */
+        }
+
+        /* Specific column widths for 3-column tables */
+        th:nth-child(2),
+        th:nth-child(3) {
+            width: 35%;
+        }
+
+        /* Zebra Striping */
+        tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        /* Row Hover Effect */
+        tbody tr:hover {
+            background-color: #e0f7fa;
+            cursor: default;
+        }
+
+        .sub-header {
+            background-color: #eceff1;
+            font-weight: bold;
+            color: #455a64;
+            font-style: italic;
+        }
+
+        /* --- Link Styling (Direct Click) --- */
+        .source-link {
+            color: white;
+            background-color: var(--secondary-color);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 5px;
+            display: inline-block;
+            transition: background-color 0.2s;
+            vertical-align: middle;
+        }
+
+        .source-link:hover {
+            background-color: var(--accent-color);
+            color: white;
+            cursor: pointer;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #78909c;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .student-info {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            th,
+            td {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            th {
+                text-align: center;
+                background: #e0f2f1;
+            }
+
+            tr {
+                margin-bottom: 1rem;
+                display: block;
+                border-bottom: 2px solid var(--primary-color);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Market Analysis (4S Model)</h1>
+        <div class="student-info">
+            <span class="info-badge">🎓 <strong>Ravi Kr. Thakur </strong></span>
+            <span class="info-badge">🩺 Disease: <strong>Osteoarthritis</strong></span>
+            <span class="info-badge">📍 State: <strong>Uttar Pradesh</strong></span>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <section>
+            <div class="section-header">1. Market Size Estimate</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Criteria</th>
+                        <th>OPD (Consultation)</th>
+                        <th>IPD (Surgery)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Volume (Patients)</strong></td>
+                        <td>~45 Lakhs <br><small>Prevalent cases in UP seeking care</small></td>
+                        <td>~1.35 Lakhs <br><small>3% of cases requiring hospitalization</small></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Prevalent Population</strong></td>
+                        <td>~9.36% <a href="https://www.iipsindia.ac.in/content/lasi-publications" target="_blank"
+                                class="source-link" title="Open LASI Report Source">LASI [1]</a></td>
+                        <td>
+                            <1% <small>(Severe cases)</small>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Diagnosed Population</strong></td>
+                        <td>~60-70% <small>(Self-diagnosis/OTC use high)</small></td>
+                        <td>~30-40% <small>(Limited by rural access)</small></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Value (Cost)</strong></td>
+                        <td>₹500 - ₹600 <a href="https://microdata.gov.in/NADA/index.php/catalog/152" target="_blank"
+                                class="source-link" title="Open MOSPI/NSSO Report">NSSO [2]</a></td>
+                        <td>₹1.5L - ₹4.5L <a
+                                href="https://www.bajajfinservhealth.in/surgeries/cost/knee-replacement-cost-in-india"
+                                target="_blank" class="source-link" title="Open Cost Guide">Bajaj [5]</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <div class="section-header">2. Market Shape Estimate</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Criteria</th>
+                        <th>OPD Characteristics</th>
+                        <th>IPD Characteristics</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="sub-header">
+                        <td colspan="3">Consumer Location</td>
+                    </tr>
+                    <tr>
+                        <td>Metro (Lucknow/Noida)</td>
+                        <td>High Demand (Specialist Clinics)</td>
+                        <td>Very High (Surgical Hubs)</td>
+                    </tr>
+                    <tr>
+                        <td>Rural Areas</td>
+                        <td>High Volume (PHCs/Quacks)</td>
+                        <td>Negligible (Referrals only)</td>
+                    </tr>
+
+                    <tr class="sub-header">
+                        <td colspan="3">Consumer Age Group</td>
+                    </tr>
+                    <tr>
+                        <td>40-60 years</td>
+                        <td>35% (Onset of symptoms)</td>
+                        <td>30% (Early intervention)</td>
+                    </tr>
+                    <tr>
+                        <td>60+ years</td>
+                        <td>55% (Chronic management)</td>
+                        <td>65% (Primary TKR demographic)</td>
+                    </tr>
+
+                    <tr class="sub-header">
+                        <td colspan="3">Consumer Gender</td>
+                    </tr>
+                    <tr>
+                        <td>Distribution</td>
+                        <td>Female: 65% <a
+                                href="https://www.researchgate.net/publication/360736390_Burden_of_osteoarthritis_in_India_and_its_states_1990-2019_findings_from_the_Global_Burden_of_Disease_Study_2019"
+                                target="_blank" class="source-link" title="Open Lancet Study">Lancet [1]</a></td>
+                        <td>Male: 35%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <div class="section-header">3. Market Share Estimate</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Criteria</th>
+                        <th>OPD (Pharma/Pain Mgmt)</th>
+                        <th>IPD (Implants)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Top Player 1</strong></td>
+                        <td><strong>Sun Pharma</strong> (Volini/NSAIDs)</td>
+                        <td><strong>Zimmer Biomet</strong> (Implants) <a
+                                href="https://www.kenresearch.com/industry-reports/india-orthopedic-devices-market"
+                                target="_blank" class="source-link" title="Open Market Report">Ken Res [3]</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Top Player 2</strong></td>
+                        <td><strong>Abbott India</strong> (Brufen)</td>
+                        <td><strong>Stryker Corp</strong> (Robotics)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Top Player 3</strong></td>
+                        <td><strong>Dr. Reddy's</strong></td>
+                        <td><strong>J&J (DePuy Synthes)</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Others</strong></td>
+                        <td>Cipla, Mankind (Rural)</td>
+                        <td>Meril Life Sciences (Domestic)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <div class="section-header">4. Market Growth (Soar)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Timeframe</th>
+                        <th>OPD Growth</th>
+                        <th>IPD Growth</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Last 10 Years</strong></td>
+                        <td>Steady Increase (Awareness)</td>
+                        <td>Rapid (Surgeries safer)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Last 5 Years</strong></td>
+                        <td>High (Obesity trends)</td>
+                        <td>Very High (Ayushman Bharat)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Value Growth</strong></td>
+                        <td>~9.9% CAGR</td>
+                        <td>~15% YoY <a href="https://www.imarcgroup.com/india-orthopedic-implants-market"
+                                target="_blank" class="source-link" title="Open IMARC Forecast">IMARC [4]</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section style="background: transparent; box-shadow: none;">
+            <h3>Direct Source Links</h3>
+            <ul style="color: #607d8b; font-size: 0.9rem;">
+                <li><a href="https://www.iipsindia.ac.in/content/lasi-publications" target="_blank"
+                        style="color: #00838f;">[1] LASI Wave 1 (2020) - Osteoarthritis Prevalence Data</a></li>
+                <li><a href="https://microdata.gov.in/NADA/index.php/catalog/152" target="_blank"
+                        style="color: #00838f;">[2] NSSO 75th Round Report - Health Expenditure</a></li>
+                <li><a href="https://www.kenresearch.com/industry-reports/india-orthopedic-devices-market"
+                        target="_blank" style="color: #00838f;">[3] Ken Research - India Orthopedic Market Share</a>
+                </li>
+                <li><a href="https://www.imarcgroup.com/india-orthopedic-implants-market" target="_blank"
+                        style="color: #00838f;">[4] IMARC Group - Market Forecast 2025-2033</a></li>
+                <li><a href="https://www.bajajfinservhealth.in/surgeries/cost/knee-replacement-cost-in-india"
+                        target="_blank" style="color: #00838f;">[5] Bajaj Finserv - Knee Replacement Cost Guide</a></li>
+            </ul>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Prof. Biranchi Jena | 4S Model Analysis Framework</p>
+    </footer>
+
+</body>
+
+</html>
